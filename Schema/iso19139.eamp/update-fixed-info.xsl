@@ -67,11 +67,11 @@
                 <xsl:when test="not(gmd:identifier)">
                     <xsl:message>==== Add missing resource identifier ====</xsl:message>
                     <gmd:identifier>
-                        <gmd:RS_Identifier>
+                        <gmd:MD_Identifier>
                             <gmd:code>
-                                <gco:CharacterString><xsl:value-of select="/root/env/uuid"/>_resource</gco:CharacterString>
+                                <gco:CharacterString><xsl:value-of select="/root/env/uuid"/></gco:CharacterString>
                             </gmd:code>
-                        </gmd:RS_Identifier>
+                        </gmd:MD_Identifier>
                     </gmd:identifier>
                 </xsl:when>
                 <xsl:otherwise>
