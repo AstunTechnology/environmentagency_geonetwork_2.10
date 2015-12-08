@@ -1424,7 +1424,7 @@ If  the data has been through the Approval for Access process the abstract from 
 			<option value="Open format | Arc/Info ASCII Grid (AAIGrid)">Arc/Info ASCII Grid (AAIGrid)</option>                        
 			<option value="Proprietary Format | Arc/Info Binary Grid (AIG)">Arc/Info Binary Grid (AIG)</option>
 			<option value="Open Format | ASCII Gridded XYZ (XYZ)">ASCII Gridded XYZ (XYZ)</option>
-			<option value="Open format | CAD Data eXchange Format (DFX)">CAD Data eXchange Format (DFX)</option>
+			<option value="Open format | CAD Data eXchange Format (DXF)">CAD Data eXchange Format (DXF)</option>
 			<option value="Proprietary format |  CAD Drawing file (DWG)">CAD Drawing file (DWG)</option>
 			<option value="OGC Web Services | Catalogue Service for the Web (CSW)">Catalogue Service for the Web (CSW)</option>
 			<option value="Open format | City GML (Citygml)">City GML (Citygml)</option>
