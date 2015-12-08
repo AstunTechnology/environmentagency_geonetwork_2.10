@@ -1456,8 +1456,6 @@ If  the data has been through the Approval for Access process the abstract from 
 			<option value="Compressed format | Multi-resolution Seamless Image Database (MrSID)">Mr Sid (Multi-resolution Seamless Image Database) (MrSID)</option>
 			<option value="Proprietary format |  MS Excel (XLS)"> MS Excel (XLS)</option>
 			<option value="Open format |  MS Excel (XLSX)">MS Excel (XLSX)</option>
-			<option value="Proprietary format |  MS Word or Open Office (DOC)">MS Word or Open Office (DOC)</option>
-			<option value="Open format | MS Word or Open Office (DOCX)">MS Word or Open Office (DOCX)</option>
 			<option value="Open format | National Transfer Format - OS (NTF)">National Transfer Format - OS (NTF)</option>
 			<option value="Open format | Open Document Presentation (ODP)">Open Document Presentation (ODP)</option>
 			<option value="Open format | Open Document Spreadsheet (ODS)">Open Document Spreadsheet (ODS)</option>
