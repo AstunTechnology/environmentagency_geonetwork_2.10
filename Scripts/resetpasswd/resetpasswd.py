@@ -71,30 +71,65 @@ def send_email(email_body, email_to, email_settings):
     server.quit()
 
 
-def main(geonetwork_config_path, num_days, email_template_path, base_dir, print_settings):
+def get_users_who_need_reset(conn, base_dir, num_days):
 
     log = logging.getLogger('resetpasswd')
 
-    config = parse_config(geonetwork_config_path, './properties/')
-    conn_args = build_conn_args(config.get('db_url'), config.get('db_user'), config.get('db_pass'))
+    users = []
 
-    tmpl = Template(slurp(email_template_path))
-    with psycopg2.connect(**conn_args) as conn:
-        sys_settings = get_sys_settings(conn, os.path.join(base_dir, 'settings.sql'))
-        if print_settings:
-            print json.dumps(sys_settings, indent=4)
-            return
+    with conn:
         with conn.cursor(cursor_factory=psycopg2.extras.DictCursor) as cur:
-            sql = slurp(os.path.join(base_dir, 'resetpasswd.sql'))
-            log.info('Checking users who have not reset password in %s days.' % num_days)
-            log.debug('Executing resetpasswd.sql:\n%s' % sql)
-            cur.execute(sql, {'num_days': num_days})
+            user_sql = slurp(os.path.join(base_dir, 'needreset.sql'))
+            log.info('Checking for users who have not changed their password in %s days.' % num_days)
+            cur.execute(user_sql, {'num_days': num_days})
+            log.debug('Executed needreset.sql:\n%s\n%s' % (cur.query, cur.statusmessage))
             log.info('Found %s users who need to reset their password.' % cur.rowcount)
-            for user in cur:
-                log.info('Forcing password reset for user: %s.' % user.get('username'))
-                log.debug('User: %s' % user)
-                email_body = tmpl.render(user=user, settings=sys_settings)
-                send_email(email_body, [user.get('email')], sys_settings.get('system').get('feedback'))
+            users = cur.fetchall()
+
+    return users
+
+
+def reset_user(conn, base_dir, reset_tmpl, sys_settings, user):
+
+    log = logging.getLogger('resetpasswd')
+
+    reset_sql = slurp(os.path.join(base_dir, 'resetpasswd.sql'))
+    reset_tmpl = Template(slurp(reset_tmpl))
+
+    try:
+        log.debug('Attempting to send reset email to user: %s (%s)' % (user.get('username'), user.get('email')))
+        email_body = reset_tmpl.render(user=user, settings=sys_settings)
+        send_email(email_body, [user.get('email')], sys_settings.get('system').get('feedback'))
+    except:
+        log.exception('Failed to send reset email.')
+    else:
+        with conn:
+            with conn.cursor() as cur:
+                cur.execute(reset_sql, {'id': user.get('id')})
+                log.debug('Executed resetpasswd.sql:\n%s\n%s' % (cur.query, cur.statusmessage))
+
+
+
+def main(db_conn_args, base_dir, args):
+
+    if args.get('days') - args.get('reminder') < 1:
+        print 'error: reminder days must be less than reset days'
+        return 1
+
+    conn = psycopg2.connect(**db_conn_args)
+
+    with conn:
+        sys_settings = get_sys_settings(conn, os.path.join(base_dir, 'settings.sql'))
+        if args.get('settings'):
+            print json.dumps(sys_settings, indent=4)
+            return 0
+
+    # Reset users who have not changed their password within num_days
+    users = get_users_who_need_reset(conn, base_dir, args.get('days'))
+    for user in users:
+        reset_user(conn, base_dir, args.get('template'), sys_settings, user)
+
+    return 0
 
 
 if __name__ == '__main__':
@@ -128,4 +163,8 @@ if __name__ == '__main__':
     log_level = getattr(logging, args.get('log').upper(), logging.INFO)
     log.setLevel(log_level)
 
-    main(args.get('config'), args.get('days'), args.get('template'), base_dir, args.get('settings'))
+    config = parse_config(args.get('config'), './properties/')
+    db_conn_args = build_conn_args(config.get('db_url'), config.get('db_user'), config.get('db_pass'))
+
+    result = main(db_conn_args, base_dir, args)
+    exit(result)
