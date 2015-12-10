@@ -1,0 +1,7 @@
+<config>
+    <properties>
+        <db.user>geonetwork</db.user>
+        <db.pass>xxxxxxxx</db.pass>
+        <db.dbname>jdbc:postgresql://localhost:5432/geonetwork</db.dbname>
+    </properties>
+</config>

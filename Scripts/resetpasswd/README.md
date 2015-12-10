@@ -48,6 +48,14 @@ For usage run `resetpasswd.py` using the `python` interpreter from the virtual e
 
     python resetpasswd.py --help
 
+## Tests
+
+Running the unit and system tests requires [`nosetests`](http://nose.readthedocs.org/en/latest/). The system test create a temporary Postgres database which is removed at the end of the run. System tests will currently only on run on Linux or Mac due to the [testing.postgresql](https://pypi.python.org/pypi/testing.postgresql) package only supporting *nix operating systems at present.
+
+Run all tests stopping on failure (`-x`) and capturing output (`-s`) so you can see debug statements:
+
+    nosetests -x -s
+
 ## Implementation
 
 ### Notes
