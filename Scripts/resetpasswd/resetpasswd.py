@@ -109,6 +109,37 @@ def reset_user(conn, base_dir, reset_tmpl, sys_settings, user):
                 log.debug('Executed resetpasswd.sql:\n%s\n%s' % (cur.query, cur.statusmessage))
 
 
+def get_users_who_need_reminder(conn, base_dir, num_days, reminder_days):
+
+    log = logging.getLogger('resetpasswd')
+
+    users = []
+
+    with conn:
+        with conn.cursor(cursor_factory=psycopg2.extras.DictCursor) as cur:
+            user_sql = slurp(os.path.join(base_dir, 'needreminder.sql'))
+            log.info('Checking for users who need a reminder as they will be reset in %s days.' % reminder_days)
+            cur.execute(user_sql, {'num_days': num_days, 'reminder_days': reminder_days})
+            log.debug('Executed needreminder.sql:\n%s\n%s' % (cur.query, cur.statusmessage))
+            log.info('Found %s users who need a reminder.' % cur.rowcount)
+            users = cur.fetchall()
+
+    return users
+
+
+def remind_user(conn, base_dir, reminder_tmpl, sys_settings, user):
+
+    log = logging.getLogger('resetpasswd')
+
+    reminder_tmpl = Template(slurp(reminder_tmpl))
+
+    try:
+        log.debug('Attempting to send reminder to user: %s (%s)' % (user.get('username'), user.get('email')))
+        email_body = reminder_tmpl.render(user=user, settings=sys_settings)
+        send_email(email_body, [user.get('email')], sys_settings.get('system').get('feedback'))
+    except:
+        log.exception('Failed to send reminder.')
+
 
 def main(db_conn_args, base_dir, args):
 
@@ -129,6 +160,11 @@ def main(db_conn_args, base_dir, args):
     for user in users:
         reset_user(conn, base_dir, args.get('template'), sys_settings, user)
 
+    # Send reminders to users who are due to be reset in reminder_days
+    users = get_users_who_need_reminder(conn, base_dir, args.get('days'), args.get('reminder'))
+    for user in users:
+        remind_user(conn, base_dir, args.get('reminder_template'), sys_settings, user)
+
     return 0
 
 
@@ -145,8 +181,10 @@ if __name__ == '__main__':
     base_dir = os.path.dirname(os.path.realpath(__file__))
 
     # Defaults
-    email_template_path = os.path.join(base_dir, 'email.tmpl')
+    email_template_path = os.path.join(base_dir, 'email_reset.tmpl')
+    reminder_template_path = os.path.join(base_dir, 'email_reminder.tmpl')
     num_days = 42
+    reminder_days = 7
 
     parser = argparse.ArgumentParser(__file__, description="Force users who have not reset their password in a given number of days to do so at next login")
     parser.add_argument("config", help="""path to GeoNetwork config from which database connection details can be read;
@@ -155,9 +193,12 @@ if __name__ == '__main__':
                                           available to the email template under the key 'settings'.
                                           To view available settings run with the --settings flag""")
     parser.add_argument("-d", "--days", default=num_days, type=int, help="number of days after which a user must changed their password, default: %s" % num_days)
+    parser.add_argument("-r", "--reminder", default=reminder_days, type=int, help="number of days before a user must change their password that a reminder will be sent, default: %s" % reminder_days)
     parser.add_argument("-t", "--template", default=email_template_path, help="path to Jinja2 email template, default: %s" % email_template_path)
+    parser.add_argument("-u", "--reminder_template", default=reminder_template_path, help="path to Jinja2 reminder email template, default: %s" % reminder_template_path)
     parser.add_argument("-s", "--settings", action='store_true', help="print GeoNetwork settings as JSON to stdout and exit")
     parser.add_argument("-l", "--log", default=logging.getLevelName(log_level), help="standard Python logging level, default: %s" % logging.getLevelName(log_level))
+
     args = vars(parser.parse_args())
 
     log_level = getattr(logging, args.get('log').upper(), logging.INFO)

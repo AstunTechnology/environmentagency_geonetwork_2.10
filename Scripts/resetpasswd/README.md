@@ -1,8 +1,10 @@
 # Force GeoNetwork Password Reset
 
-Requirement:
+Requirements:
 
-> must force the password to be changed every 42 days
+> Force the password to be changed every 42 days
+
+> We would like an email notification to be sent to users a week (for example) before their password is due to expire asking them to change it
 
 GeoNetwork doesn't have a facility to force users to change their password after a given number of days. This script and associated SQL add this ability.
 
@@ -67,15 +69,18 @@ Run all tests stopping on failure (`-x`) and capturing output (`-s`) so you can 
 ### Workflow
 
 * The script `resetpasswd.py` is ran daily, it:
-    * Builds a list of all users who have not changed their password in the last `n` days:
+    * Builds a list of all users who have not changed their password in the last `x` days:
         * Find the `id` of all users that *do not* have an audit entry for the `users` table due to:
             * Update action with password in changed_fields - Updated their password
             * Insert action - New user added
-    * For each `userid`:
-        * Update the user's entry in the `users` table:
-            * `profile` to `'RegisteredUser'` - enables the user to use the "Forgotten you password?" function to reset their password
-            * `password` to a constant value - disables access to their account until their password is reset
-        * Send an email to the user to inform them that they need to reset their password before they can next login
+        * For each `userid`:
+            * Send an email to the user to inform them that they need to reset their password before they can next login
+            * Update the user's entry in the `users` table:
+                * `profile` to `'RegisteredUser'` - enables the user to use the "Forgotten you password?" function to reset their password
+                * `password` to a constant value - disables access to their account until their password is reset
+    * Builds a list of users who need a reminder that their password is due to be reset in `y` days
+        * For each `userid`:
+            * Send an email to the user to inform them that they need to change their password within the next `y` days before it is reset
 
 * A trigger is ran before the `password` field is updated in the `users` table, if the old `password` is equal to the constant set by `resetpasswd.py` then set the users profile to the most recent profile value found in the audit table.
     * The audit table is used to determine the profile as:
@@ -84,6 +89,6 @@ Run all tests stopping on failure (`-x`) and capturing output (`-s`) so you can 
 
 ## Potential enhancements
 
-* Send a warning email x days before a users account is locked
+* ~~Send a warning email x days before a users account is locked~~
 * Add prominent link to the home page from the page that confirms a users password has been changed
-* Ensure a users is logged on the page that confirms a users password has been changed
+* Ensure a users is logged in on the page that confirms a users password has been changed

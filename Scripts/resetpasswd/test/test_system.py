@@ -37,7 +37,7 @@ def test_all_users_reset_on_first_run():
 
     with patch("smtplib.SMTP") as mock_smtp:
         smtp_instance = mock_smtp.return_value
-        main(conn_args, './', {"days": 42, "template": 'email_reset.tmpl', "settings": False})
+        main(conn_args, './', {"days": 42, "reminder": 7, "template": 'email_reset.tmpl', "reminder_template": 'email_reminder.tmpl', "settings": False})
         eq_(smtp_instance.sendmail.call_count, 3)
 
 
@@ -51,7 +51,7 @@ def test_no_reset_required_if_ran_on_same_day():
 
     with patch("smtplib.SMTP") as mock_smtp:
         smtp_instance = mock_smtp.return_value
-        main(conn_args, './', {'days': 42, 'template': 'email_reset.tmpl', 'settings': False})
+        main(conn_args, './', {'days': 42, 'reminder': 7, 'template': 'email_reset.tmpl', 'reminder_template': 'email_reminder.tmpl', 'settings': False})
         eq_(smtp_instance.sendmail.call_count, 0)
 
 
@@ -64,7 +64,7 @@ def test_user_changed_password_within_x_days_no_reset_required():
 
     with patch("smtplib.SMTP") as mock_smtp:
         smtp_instance = mock_smtp.return_value
-        main(conn_args, './', {'days': 42, 'template': 'email_reset.tmpl', 'settings': False})
+        main(conn_args, './', {'days': 42, 'reminder': 7, 'template': 'email_reset.tmpl', 'reminder_template': 'email_reminder.tmpl', 'settings': False})
         eq_(smtp_instance.sendmail.call_count, 0)
 
 
@@ -79,7 +79,7 @@ def test_user_not_changed_password_within_x_days_reset_required():
 
     with patch("smtplib.SMTP") as mock_smtp:
         smtp_instance = mock_smtp.return_value
-        main(conn_args, './', {'days': 42, 'template': 'email_reset.tmpl', 'settings': False})
+        main(conn_args, './', {'days': 42, 'reminder': 7, 'template': 'email_reset.tmpl', 'reminder_template': 'email_reminder.tmpl', 'settings': False})
         eq_(smtp_instance.sendmail.call_count, 1)
 
     # Check that there are now two rows in the audit.logged_actions table
@@ -91,6 +91,44 @@ def test_user_not_changed_password_within_x_days_reset_required():
         cur.execute("""SELECT * FROM audit.logged_actions;""")
         rows = cur.fetchall()
         eq_(len(rows), 2)
+
+
+def test_send_reminder_to_active_user():
+
+    # A reminder email should be sent to all users who are due to be reset. The
+    # reminder is sent a given number of days before they are due to be reset.
+    with conn.cursor() as cur:
+        cur.execute(slurp('./test/fixtures/state_user_changed_password_35_days_ago.sql'))
+
+    with patch("smtplib.SMTP") as mock_smtp:
+        smtp_instance = mock_smtp.return_value
+        main(conn_args, './', {'days': 42, 'reminder': 7, 'template': 'email_reset.tmpl', 'reminder_template': 'email_reminder.tmpl', 'settings': False})
+        eq_(smtp_instance.sendmail.call_count, 1)
+        assert 'reminder' in smtp_instance.sendmail.call_args[0][2]
+
+
+def test_dont_send_reminder_to_reset_user():
+
+    # Only users who are not already reset should be sent a reminder
+    with conn.cursor() as cur:
+        cur.execute(slurp('./test/fixtures/state_user_reset_35_days_ago.sql'))
+
+    with patch("smtplib.SMTP") as mock_smtp:
+        smtp_instance = mock_smtp.return_value
+        main(conn_args, './', {'days': 42, 'reminder': 7, 'template': 'email_reset.tmpl', 'reminder_template': 'email_reminder.tmpl', 'settings': False})
+        eq_(smtp_instance.sendmail.call_count, 0)
+
+
+def test_dont_send_reminder_when_not_due():
+
+    # Don't send a reminder if it's not the appropriate time
+    with conn.cursor() as cur:
+        cur.execute(slurp('./test/fixtures/state_user_changed_password_40_days_ago.sql'))
+
+    with patch("smtplib.SMTP") as mock_smtp:
+        smtp_instance = mock_smtp.return_value
+        main(conn_args, './', {'days': 42, 'reminder': 7, 'template': 'email_reset.tmpl', 'reminder_template': 'email_reminder.tmpl', 'settings': False})
+        eq_(smtp_instance.sendmail.call_count, 0)
 
 
 def test_user_not_reset_if_sending_email_fails():
@@ -107,7 +145,7 @@ def test_user_not_reset_if_sending_email_fails():
     with patch("smtplib.SMTP") as mock_smtp:
         smtp_instance = mock_smtp.return_value
         smtp_instance.sendmail.side_effect = sendmail_raise_on_invalid_email
-        main(conn_args, './', {'days': 42, 'template': 'email_reset.tmpl', 'settings': False})
+        main(conn_args, './', {'days': 42, 'reminder': 7, 'template': 'email_reset.tmpl', 'reminder_template': 'email_reminder.tmpl', 'settings': False})
         eq_(smtp_instance.sendmail.call_count, 1)
 
     with conn.cursor() as cur:
@@ -135,7 +173,7 @@ def test_continue_to_reset_other_users_if_a_users_email_is_invalid():
 
         smtp_instance = mock_smtp.return_value
         smtp_instance.sendmail.side_effect = sendmail_raise_on_invalid_email
-        main(conn_args, './', {'days': 42, 'template': 'email_reset.tmpl', 'settings': False})
+        main(conn_args, './', {'days': 42, 'reminder': 7, 'template': 'email_reset.tmpl', 'reminder_template': 'email_reminder.tmpl', 'settings': False})
         eq_(smtp_instance.sendmail.call_count, 3)
 
     with conn.cursor() as cur:
@@ -182,7 +220,7 @@ def test_change_password_restores_profile():
 
     # Do an initial run from fresh which triggers a reset for all users
     with patch("smtplib.SMTP"):
-        main(conn_args, './', {'days': 42, 'template': 'email_reset.tmpl', 'settings': False})
+        main(conn_args, './', {'days': 42, 'reminder': 7, 'template': 'email_reset.tmpl', 'reminder_template': 'email_reminder.tmpl', 'settings': False})
 
     with conn.cursor() as cur:
         reset_profiles = distinct_profiles(conn)
