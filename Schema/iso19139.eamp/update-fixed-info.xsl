@@ -64,7 +64,7 @@
             <xsl:apply-templates select="gmd:title|gmd:alternateTitle|gmd:date|gmd:date|gmd:edition|gmd:editionDate"/>
 
             <xsl:choose>
-                <xsl:when test="not(gmd:identifier)">
+                <xsl:when test="gmd:identifier/gmd:MD_Identifier/gmd:code[@gco:nilReason='missing' or gco:CharacterString='']">
                     <xsl:message>==== Add missing resource identifier ====</xsl:message>
                     <gmd:identifier>
                         <gmd:MD_Identifier>
@@ -75,14 +75,17 @@
                     </gmd:identifier>
                 </xsl:when>
                 <xsl:otherwise>
+                  <xsl:message>=== Not adding resource identifier===</xsl:message>
                     <xsl:apply-templates select="gmd:identifier"/>
                 </xsl:otherwise>
             </xsl:choose>
 
-            <xsl:apply-templates select="gmd:citedResponsibleParty|gmd:presentationForm|gmd:series|gmd:otherCitationDetails|gmd:collectiveTitle|gmd:ISBN|gmd:ISSN"/>
+             <xsl:apply-templates select="gmd:citedResponsibleParty|gmd:presentationForm|gmd:series|gmd:otherCitationDetails|gmd:collectiveTitle|gmd:ISBN|gmd:ISSN"/>
+
 
         </xsl:copy>
     </xsl:template>
+
 
     <!-- ================================================================= -->
 	<!-- GEMINI Profile DateStamp: only gco:date allowed-->
