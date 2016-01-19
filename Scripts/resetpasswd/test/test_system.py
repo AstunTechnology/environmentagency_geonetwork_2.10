@@ -107,6 +107,20 @@ def test_send_reminder_to_active_user():
         assert 'reminder' in smtp_instance.sendmail.call_args[0][2]
 
 
+def test_only_consider_latest_password_change_event_when_determining_if_reminder_due():
+
+    # An issue was identified by @archaeogeek where a reminder was sent for a
+    # previous password change event even though her password had been changed
+    # via the admin pages more recently and hence no reminder was required
+    with conn.cursor() as cur:
+        cur.execute(slurp('./test/fixtures/state_user_changed_password_35_and_5_days_ago.sql'))
+
+    with patch("smtplib.SMTP") as mock_smtp:
+        smtp_instance = mock_smtp.return_value
+        main(conn_args, './', {'days': 42, 'reminder': 7, 'template': 'email_reset.tmpl', 'reminder_template': 'email_reminder.tmpl', 'settings': False})
+        eq_(smtp_instance.sendmail.call_count, 0)
+
+
 def test_dont_send_reminder_to_reset_user():
 
     # Only users who are not already reset should be sent a reminder
