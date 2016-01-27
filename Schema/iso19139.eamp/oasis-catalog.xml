@@ -54,4 +54,9 @@
 	<system systemId="http://www.w3.org/1999/xlink/xlinks.xsd" 
 	        uri="schema/xlink/xlinks.xsd"/>
 
+    <!-- eamp -->
+    <system systemId="http://environment.data.gov.uk/eamp/schema.xsd"
+            uri="schema.xsd" />
+
+
 </catalog>
