@@ -59,4 +59,9 @@
             uri="schema.xsd" />
 
 
+    <!-- srv -->
+    <system systemId="http://eden.ign.fr/xsd/isotc211/isofull/20090316/srv/srv.xsd"
+    		uri="schema/srv/srv.xsd"/>
+
+
 </catalog>
