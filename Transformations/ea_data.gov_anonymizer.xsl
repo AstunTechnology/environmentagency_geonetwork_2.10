@@ -175,6 +175,7 @@
 	
 	<!-- Change standard from EAMP to Gemini -->
 	<xsl:template match="*/gmd:metadataStandardName">
+		<xsl:message>==== Updating Metadata Standard Name ====</xsl:message>
 		<gmd:metadataStandardName>
 			<gco:CharacterString>Gemini</gco:CharacterString>
 		</gmd:metadataStandardName>
