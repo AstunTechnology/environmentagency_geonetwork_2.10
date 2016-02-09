@@ -77,4 +77,4 @@
 	</form>
 			</xsl:otherwise>
 		</xsl:choose>
-	</xsl
+	</xsl:template>
