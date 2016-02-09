@@ -11,7 +11,7 @@
 	<!-- update datestamp to current date as passed in processing URL in parameter curDate. Needs to be of form 2016-01-28T16:54:47 -->        
 	 <xsl:template match="gmd:dateStamp">
 			<xsl:copy>
-				<gco:DateTime><xsl:value-of select="$newName"/></gco:DateTime>
+				<gco:DateTime><xsl:value-of select="$curDate"/></gco:DateTime>
 			</xsl:copy>
     </xsl:template>
 
