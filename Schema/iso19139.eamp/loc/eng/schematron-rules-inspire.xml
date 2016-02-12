@@ -62,7 +62,7 @@
         ISO 19115.
     </div></alert.M39>
     <report.M39><div>ISO topic category is:</div></report.M39>
-    <alert.M40><div><h2>INSPIRE theme is mandatory</h2></div></alert.M40>
+    <alert.M40><div><h2>A keyword from the INSPIRE theme thesauri is mandatory for INSPIRE compliance</h2></div></alert.M40>
     <report.M40><div> INSPIRE theme(s) found.</div></report.M40>
     <alert.M41><div><h2>INSPIRE - Geographic bounding box is mandatory</h2><br/>
         <ul>
