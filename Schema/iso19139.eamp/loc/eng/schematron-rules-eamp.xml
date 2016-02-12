@@ -11,7 +11,7 @@
     <EAMP100.alert.noformat>At least one Distribution Format must be provided</EAMP100.alert.noformat>
 
     <EAMP200>AfA</EAMP200>
-    <EAMP200.alert.number>AfANumber is mandatory for records with status notAfaToBeAssessedWithGuidance, afaPubSchemeAndInfoForReuseReg, afaPublicRegister, afaPublicationScheme or afaInformationRequestsOnly</EAMP200.alert.number>
+    <EAMP200.alert.number>AfANumber is mandatory for records with the following status only: notAfaToBeAssessedWithGuidance, afaPubSchemeAndInfoForReuseReg, afaPublicRegister, afaPublicationScheme or afaInformationRequestsOnly</EAMP200.alert.number>
 
     <EAMP300>Point of Contact</EAMP300>
     <EAMP300.alert.name>Each Point of Contact must contain one Individual Name</EAMP300.alert.name>

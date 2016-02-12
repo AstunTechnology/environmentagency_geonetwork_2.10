@@ -48,11 +48,11 @@
                 //eamp:EA_AfaStatus = 'AfA (Public Register)' or
                 //eamp:EA_AfaStatus = 'AfA (Publication Scheme)' or
                 //eamp:EA_AfaStatus = 'AfA (Information Requests only)') and
-                string-length(//*[eamp:afaNumber]//gco:Decimal)!=0) or ((
-                //eamp:EA_AfaStatus = 'Not AfA (To be Assessed)' or 
-                //eamp:EA_AfaStatus = 'Not Applicable - third party dataset') or 
+                //*[eamp:afaNumber]//gco:Decimal!=0) or ((
+                //eamp:EA_AfaStatus = 'Not AfA (To be Assessed)' or
+                //eamp:EA_AfaStatus = 'Not Applicable - third party dataset') or
                 //eamp:EA_AfaStatus = 'Open Data Risk Assessment'
-                and string-length(//*[eamp:afaNumber]//gco:Decimal)=0)">$loc/strings/EAMP200.alert.number</sch:assert>
+                and //*[eamp:afaNumber]//gco:Decimal=0)">$loc/strings/EAMP200.alert.number</sch:assert>
         </sch:rule>
     </sch:pattern>
  
