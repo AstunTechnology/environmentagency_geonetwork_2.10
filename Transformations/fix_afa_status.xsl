@@ -22,7 +22,7 @@
     <xsl:template match="*/eamp:EA_AfaStatus">
         <xsl:if test="contains(.,'AfA (Publication Scheme &amp; Information for Re-Use Register)')">
         <xsl:message>==== Dodgy status ====</xsl:message>
-        <xsl:text>AfA (Publication Scheme and Information for Re-Use Register)</xsl:text>
+                <eamp:EA_AfaStatus>AfA (Publication Scheme and Information for Re-Use Register)</eamp:EA_AfaStatus>
         </xsl:if>
         <xsl:if test="not(contains(.,'AfA (Publication Scheme &amp; Information for Re-Use Register)'))">
         <xsl:message>==== OK status ====</xsl:message>
