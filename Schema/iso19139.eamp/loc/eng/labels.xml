@@ -1421,9 +1421,12 @@ If  the data has been through the Approval for Access process the abstract from 
 		<help>Data should be available in at least one Open format</help>
 		<condition>mandatory</condition>
 		<helper rel="gmd:version">
+			<option value="Proprietary format | Access 2007 onwards database (ACCDB)">Access 2007 onwards database (ACCDB)</option>
 			<option value="Open format | Arc/Info ASCII Grid (AAIGrid)">Arc/Info ASCII Grid (AAIGrid)</option>                        
 			<option value="Proprietary Format | Arc/Info Binary Grid (AIG)">Arc/Info Binary Grid (AIG)</option>
 			<option value="Open Format | ASCII Gridded XYZ (XYZ)">ASCII Gridded XYZ (XYZ)</option>
+			<option value="Open Format | ASCII Text Files (non-csv, non-xyz gridded, non-tab separated format)">ASCII text files (non-csv, non-xyz gridded, non-tab separated format)</option>
+			<option value="Open Format | Bathymetric Attributed Grid (BAG)">Bathymetric Attributed Grid (BAG)</option>
 			<option value="Open format | CAD Data eXchange Format (DXF)">CAD Data eXchange Format (DXF)</option>
 			<option value="Proprietary format |  CAD Drawing file (DWG)">CAD Drawing file (DWG)</option>
 			<option value="OGC Web Services | Catalogue Service for the Web (CSW)">Catalogue Service for the Web (CSW)</option>
@@ -1434,17 +1437,22 @@ If  the data has been through the Approval for Access process the abstract from 
 			<option value="Proprietary format |  ERDAS IMAGINE (IMG)">ERDAS IMAGINE (IMG)</option>
 			<option value="Proprietary format |  ERDASRaw (RAW)">ERDASRaw (RAW)</option>
 			<option value="Proprietary format |  ESRI File based Geodatabase (GDB)">ESRI File based Geodatabase (GDB)</option>
+			<option value="Proprietary format |  Fledermaus scientific data (SD)">Fledermaus scientific data (SD)</option>
+			<option value="Proprietary format |  Fledermaus scientific data scene (SCENE)">Fledermaus scientific data scene (SCENE)</option>
 			<option value="Open format | Geo Tagged Image File Format (GeoTIFF)"> Geo Tagged Image File Format (GeoTIFF)</option>
 			<option value="Open format | Geography Markup Language (GML)">Geography Markup Language (GML)</option>
 			<option value="Open format | GeoPackage (GPKG)">GeoPackage (GPKG)</option>
 			<option value="Open format | GeoRSS (Geo)">GeoRSS (Geo)</option>
 			<option value="Proprietary format | Graphical Interchange Format (GIF)">Graphical Interchange Format (GIF)</option>
 			<option value="Open format | JavaScript Object Notation (GeoJSON)">JavaScript Object Notation (GeoJSON)</option>
+			<option value="Open format | GPS Exchange Format (GPX)">GPS Exchange Format (GPX)</option>
+			<option value="Proprietary format | Generic Sensor Format (GSF) ">Generic Sensor Format (GSF)</option>
 			<option value="OGC Web Services | JavaScript Object Notation (JSON)">JavaScript Object Notation (JSON)</option>
 			<option value="Open format | Joint Photographic Experts Group (JPEG)">Joint Photographic Experts Group (JPEG)</option>
 			<option value="Open format | Joint Photographic Experts Group 2000 (JPEG2000)">Joint Photographic Experts Group 2000 (JPEG2000)</option>
 			<option value="Open format | Keyhole Markup Language (KML)">Keyhole Markup Language (KML)</option>
 			<option value="Open format | Keyhole Markup Language Zipped (KMZ)">Keyhole Markup Language Zipped (KMZ)</option>
+			<option value="Proprietary format | Generic Sensor Format (ALL)">Konegsburg sensor files (ALL)</option>
 			<option value="Compressed format | Lempel-Ziv and Welch  (TIFF)">Lempel-Ziv and Welch (TIFF)</option>
 			<option value="Open format | Lidar Data Exchange Format (LAS)">Lidar Data Exchange Format (LAS)</option>
 			<option value="Open format | Lidar Data Exchange Format (LAZ)">Lidar Data Exchange Format (LAZ)</option>
@@ -1460,17 +1468,23 @@ If  the data has been through the Approval for Access process the abstract from 
 			<option value="Open format | Open Document Presentation (ODP)">Open Document Presentation (ODP)</option>
 			<option value="Open format | Open Document Spreadsheet (ODS)">Open Document Spreadsheet (ODS)</option>
 			<option value="Open format | Open Document Text (ODT)">Open Document Text (ODT)</option>
+			<option value="Proprietary format |  Outlook File Template (OFT)">Outlook File Template (OFT)</option>
 			<option value="Compressed format | Packbit (TIFF)">Packbit (TIFF)</option>
+			<option value="Open format | Microsoft Office Pipe Separated Values file format (PSV)">Pipe Separated Values</option>
 			<option value="Open format | Portable Document Format - 3D (PDF)">Portable Document Format - 3D (PDF)</option>
 			<option value="Open format | Portable Document Format - GeoReferenced (PDF)">Portable Document Format - GeoReferenced (PDF)</option>
 			<option value="Open format | Portable Document Format - Standardized (PDF)">Portable Document Format - Standardized (PDF)</option>
 			<option value="Open format | Portable Document Format - Unreferenced (PDF)">Portable Document Format - Unreferenced (PDF)</option>
 			<option value="Open format | Portable Network Graphic (PNG)">Portable Network Graphics (PNG)</option>
+			<option value="Open Format | Plain Text File (TXT)">Plain Text File (TXT)</option>
 			<option value="Open format | Resource Description Framework (RDF)">Resource Description Framework (RDF)</option>                       
 			<option value="Open format | Resource Description Framework (XML)">Resource Description Framework (XML)</option>
+			<option value="Open format | Rich Text Format (RTF)">Rich Text Format</option>
 			<option value="Open format | Shapefile (SHP)">Shapefile (SHP)</option>
 			<option value="Proprietary format |  Tab Separated Values (TSV)">Tab Separated Values (TSV)</option>
 			<option value="Open format | Tagged Image File Format (TIFF)">Tagged Image File Format (TIFF)</option>
+			<option value="Proprietary format |  MS Word 2010 onwards document (DOC)">Word 2010 onwards document (DOC)</option>
+			<option value="Proprietary format |  MS Word 2010 onwards document (DOCX)">Word 2010 onwards document (DOCX)</option>
 		</helper>
 	</element>
 	<element name="gmd:name" context="gmd:MD_ExtendedElementInformation"
