@@ -122,10 +122,6 @@
 					|
 					<!-- EAMP additions -->
 					<a class="banner" href="http://data.gov.uk" target="_blank">Data.Gov.UK</a>
-					|
-					<a class="banner" href="http://intranet.ea.gov/knowledge/data/29816.aspx" target="_blank">Easinet</a>
-					|
-					<a class="banner" href="http://intranet.ea.gov/tools/applications/11639.aspx" target="_blank">Easimap</a>
                 </td>
 				
 				<!-- EAMP Moved the login bit to this row -->
