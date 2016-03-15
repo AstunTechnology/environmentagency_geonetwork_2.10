@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:ns2="http://www.w3.org/2004/02/skos/core#" xmlns:ns3="http://purl.org/dc/elements/1.1/" xmlns:ns6="http://www.opengis.net/gml#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022361409">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mhsro7x1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022699335">
+    <ns2:prefLabel xml:lang="en">Lincolnshire</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022361409">
+    <ns6:BoundedBy rdf:nodeID="node197mhsro7x1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mhsro7x1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022699335">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://geonetwork-opensource.org/Regions">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme" />
+    <ns3:title>Regions</ns3:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022437736">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022361409">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mhv68kx1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi9ac6x1">
+    <ns6:upperCorner>1.7 60.9</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022437736">
+    <ns6:BoundedBy rdf:nodeID="node197mhv68kx1" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022361409">
+    <ns2:prefLabel xml:lang="en">Mainland Great Britain</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mhv68kx1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi9ac6x1">
+    <ns6:lowerCorner>-8.1 50</ns6:lowerCorner>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi9l02x1">
+    <ns6:lowerCorner>-2 52</ns6:lowerCorner>
+    <ns6:upperCorner>-1.2 52.7</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022445321">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mhvdlhx1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi7ssex1">
+    <ns6:upperCorner>-0.2 54.6</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022445321">
+    <ns6:BoundedBy rdf:nodeID="node197mhvdlhx1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mhvdlhx1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi7ssex1">
+    <ns6:lowerCorner>-2.6 53.6</ns6:lowerCorner>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi85apx1">
+    <ns6:lowerCorner>-1.7 51.5</ns6:lowerCorner>
+    <ns6:upperCorner>-0.9 52.2</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mj9lhjx1">
+    <ns6:lowerCorner>-1.3 52.8</ns6:lowerCorner>
+    <ns6:upperCorner>-0.7 53.5</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022452795">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mhvkv8x1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022452795">
+    <ns6:BoundedBy rdf:nodeID="node197mhvkv8x1" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022461867">
+    <ns6:BoundedBy rdf:nodeID="node197mhvtqnx1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mhvtqnx1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi3sllx1">
+    <ns6:lowerCorner>-0.1 50.7</ns6:lowerCorner>
+    <ns6:upperCorner>0.9 51.1</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022452795">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+    <ns2:prefLabel xml:lang="en">Scotland</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022461867">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mhvtqnx1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi05lax1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022469891">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+    <ns6:BoundedBy rdf:nodeID="node197mi05lax1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi05lax1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197miak0ix1">
+    <ns6:lowerCorner>-180 -90</ns6:lowerCorner>
+    <ns6:upperCorner>180 90</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022461867">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+    <ns2:prefLabel xml:lang="en">England</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022469891">
+    <ns2:prefLabel xml:lang="en">Buckinghamshire</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022479582">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi0f49x1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022469891">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022479582">
+    <ns6:BoundedBy rdf:nodeID="node197mi0f49x1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi0f49x1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi05lax1">
+    <ns6:lowerCorner>-1.1 51.5</ns6:lowerCorner>
+    <ns6:upperCorner>-0.5 52.1</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi0f49x1">
+    <ns6:upperCorner>0.5 52.7</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022479582">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+    <ns2:prefLabel xml:lang="en">Cambridgeshire</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022487575">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi0mtux1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi0f49x1">
+    <ns6:lowerCorner>-0.5 52</ns6:lowerCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022487575">
+    <ns6:BoundedBy rdf:nodeID="node197mi0mtux1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi0mtux1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi0tkax1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi0mtux1">
+    <ns6:lowerCorner>-3.6 54</ns6:lowerCorner>
+    <ns6:upperCorner>-2.2 55.2</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022487575">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+    <ns2:prefLabel xml:lang="en">Cumbria</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022494443">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi0tkax1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022494443">
+    <ns6:BoundedBy rdf:nodeID="node197mi0tkax1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi3g6ox1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022578981">
+    <ns6:BoundedBy rdf:nodeID="node197mi3g6ox1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi3g6ox1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi0tkax1">
+    <ns6:lowerCorner>-2 52.7</ns6:lowerCorner>
+    <ns6:upperCorner>-1.2 53.5</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022494443">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+    <ns2:prefLabel xml:lang="en">Derbyshire</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022578981">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022585707">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi3mokx1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022578981">
+    <ns2:prefLabel xml:lang="en">Devon</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022585707">
+    <ns6:BoundedBy rdf:nodeID="node197mi3mokx1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi3mokx1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi3g6ox1">
+    <ns6:lowerCorner>-4.7 50.2</ns6:lowerCorner>
+    <ns6:upperCorner>-2.9 51.2</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022578981">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022585707">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+    <ns2:prefLabel xml:lang="en">Dorset</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022591759">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi3sllx1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi3mokx1">
+    <ns6:upperCorner>-1.7 51.1</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022591759">
+    <ns6:BoundedBy rdf:nodeID="node197mi3sllx1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi3sllx1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi3mokx1">
+    <ns6:lowerCorner>-3 50.5</ns6:lowerCorner>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mhvtqnx1">
+    <ns6:lowerCorner>-5.7 50</ns6:lowerCorner>
+    <ns6:upperCorner>1.8 55.8</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022591759">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+    <ns2:prefLabel xml:lang="en">East Sussex</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022599214">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi43uox1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022599214">
+    <ns6:BoundedBy rdf:nodeID="node197mi43uox1" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022607878">
+    <ns6:BoundedBy rdf:nodeID="node197mi4ce0x1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi4ce0x1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi43uox1">
+    <ns6:lowerCorner>0 51.5</ns6:lowerCorner>
+    <ns6:upperCorner>1.3 52.1</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022599214">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+    <ns2:prefLabel xml:lang="en">Essex</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022607878">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi4ce0x1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi4hfix1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022613047">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+    <ns6:BoundedBy rdf:nodeID="node197mi4hfix1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi4hfix1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi4ce0x1">
+    <ns6:lowerCorner>-11.5 35.3</ns6:lowerCorner>
+    <ns6:upperCorner>43.2 81.4</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022607878">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+    <ns2:prefLabel xml:lang="en">Europe</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022613047">
+    <ns2:prefLabel xml:lang="en">Gloucestershire</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022623780">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi4rujx1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022613047">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022623780">
+    <ns6:BoundedBy rdf:nodeID="node197mi4rujx1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi4rujx1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi4hfix1">
+    <ns6:lowerCorner>-2.7 51.6</ns6:lowerCorner>
+    <ns6:upperCorner>-1.6 52.1</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi4rujx1">
+    <ns6:upperCorner>0.3 51.7</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022623780">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+    <ns2:prefLabel xml:lang="en">Greater London</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022658931">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi5uakx1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi4rujx1">
+    <ns6:lowerCorner>-0.5 51.3</ns6:lowerCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022658931">
+    <ns6:BoundedBy rdf:nodeID="node197mi5uakx1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi5uakx1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi64gvx1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi5uakx1">
+    <ns6:lowerCorner>-2 50.7</ns6:lowerCorner>
+    <ns6:upperCorner>-0.7 51.4</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022658931">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+    <ns2:prefLabel xml:lang="en">Hampshire</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022665319">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi64gvx1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022665319">
+    <ns6:BoundedBy rdf:nodeID="node197mi64gvx1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi6fvvx1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022677059">
+    <ns6:BoundedBy rdf:nodeID="node197mi6fvvx1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi6fvvx1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi64gvx1">
+    <ns6:lowerCorner>-0.7 51.6</ns6:lowerCorner>
+    <ns6:upperCorner>0.2 52.1</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022665319">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+    <ns2:prefLabel xml:lang="en">Hertfordshire</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022677059">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022682515">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi6lacx1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022677059">
+    <ns2:prefLabel xml:lang="en">Ireland</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022682515">
+    <ns6:BoundedBy rdf:nodeID="node197mi6lacx1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi6lacx1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi6fvvx1">
+    <ns6:lowerCorner>-10.4 51.4</ns6:lowerCorner>
+    <ns6:upperCorner>-6.0 55.38</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022677059">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022682515">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+    <ns2:prefLabel xml:lang="en">Kent</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022686584">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi6p9cx1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi6lacx1">
+    <ns6:upperCorner>1.5 51.5</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022686584">
+    <ns6:BoundedBy rdf:nodeID="node197mi6p9cx1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi6p9cx1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi6lacx1">
+    <ns6:lowerCorner>0 50.9</ns6:lowerCorner>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi6p9cx1">
+    <ns6:lowerCorner>-3.1 53.5</ns6:lowerCorner>
+    <ns6:upperCorner>-2 54.2</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022686584">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+    <ns2:prefLabel xml:lang="en">Lancashire</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022692955">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi6vgfx1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022692955">
+    <ns6:BoundedBy rdf:nodeID="node197mi6vgfx1" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022699335">
+    <ns6:BoundedBy rdf:nodeID="node197mi75o1x1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi75o1x1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi6vgfx1">
+    <ns6:lowerCorner>-1.6 52.4</ns6:lowerCorner>
+    <ns6:upperCorner>-0.7 53</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022692955">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+    <ns2:prefLabel xml:lang="en">Leicestershire</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022699335">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi75o1x1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi7deox1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022707219">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+    <ns6:BoundedBy rdf:nodeID="node197mi7deox1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi7deox1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi75o1x1">
+    <ns6:lowerCorner>-0.8 52.6</ns6:lowerCorner>
+    <ns6:upperCorner>0.4 53.6</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mhsro7x1">
+    <ns6:lowerCorner>-6.2 -50</ns6:lowerCorner>
+    <ns6:upperCorner>1.7 58.7</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022707219">
+    <ns2:prefLabel xml:lang="en">Norfolk</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022715348">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi7lcfx1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022707219">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022715348">
+    <ns6:BoundedBy rdf:nodeID="node197mi7lcfx1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi7lcfx1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022723029">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+    <ns2:prefLabel xml:lang="en">North Yorkshire</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi7deox1">
+    <ns6:upperCorner>1.7 53</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022715348">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+    <ns2:prefLabel xml:lang="en">Northamptonshire</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022723029">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi7ssex1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi7deox1">
+    <ns6:lowerCorner>0.2 52.4</ns6:lowerCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022723029">
+    <ns6:BoundedBy rdf:nodeID="node197mi7ssex1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi7ssex1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi85apx1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mhvdlhx1">
+    <ns6:lowerCorner>-8.1 54.0</ns6:lowerCorner>
+    <ns6:upperCorner>-5.4 55.3</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi7lcfx1">
+    <ns6:lowerCorner>-1.3 52</ns6:lowerCorner>
+    <ns6:upperCorner>-0.3 52.6</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022731676">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi85apx1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022731676">
+    <ns6:BoundedBy rdf:nodeID="node197mi85apx1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi8ekjx1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022741209">
+    <ns6:BoundedBy rdf:nodeID="node197mi8ekjx1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi8ekjx1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mhvkv8x1">
+    <ns6:lowerCorner>-7.7 54.6</ns6:lowerCorner>
+    <ns6:upperCorner>-0.5 61.5</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022731676">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+    <ns2:prefLabel xml:lang="en">Oxfordshire</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022741209">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi8o22x1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi8ekjx1">
+    <ns6:lowerCorner>-3.8 50.8</ns6:lowerCorner>
+    <ns6:upperCorner>-2.2 51.3</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi8o22x1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+    <ns6:upperCorner>-1.6 53.2</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi8vejx1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022758180">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+    <ns2:prefLabel xml:lang="en">Suffolk</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022764603">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022758180">
+    <ns6:BoundedBy rdf:nodeID="node197mi8vejx1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi8vejx1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022741209">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+    <ns2:prefLabel xml:lang="en">Somerset</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022750850">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi8o22x1">
+    <ns6:lowerCorner>-2.5 52.4</ns6:lowerCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022750850">
+    <ns6:BoundedBy rdf:nodeID="node197mi8o22x1" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022758180">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022764603">
+    <ns6:BoundedBy rdf:nodeID="node197mi95i2x1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi95i2x1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi8vejx1">
+    <ns6:lowerCorner>0.3 51.9</ns6:lowerCorner>
+    <ns6:upperCorner>1.8 52.6</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi95i2x1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022750850">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+    <ns2:prefLabel xml:lang="en">Staffordshire</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022769525">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022764603">
+    <ns2:prefLabel xml:lang="en">Surrey</ns2:prefLabel>
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022769525">
+    <ns6:BoundedBy rdf:nodeID="node197mi9ac6x1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi9ac6x1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi95i2x1">
+    <ns6:lowerCorner>-0.8 51.1</ns6:lowerCorner>
+    <ns6:upperCorner>0.1 51.5</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi9ac6x1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi9l02x1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022780366">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+    <ns6:BoundedBy rdf:nodeID="node197mi9l02x1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mi9l02x1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022437736">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+    <ns2:prefLabel xml:lang="en">Wales</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022769525">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+    <ns2:prefLabel xml:lang="en">United Kingdom</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022780366">
+    <ns2:prefLabel xml:lang="en">Warwickshire</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022791977">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mia070x1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022780366">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022791977">
+    <ns6:BoundedBy rdf:nodeID="node197mia070x1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mia070x1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mhv68kx1">
+    <ns6:lowerCorner>-5.4 51.37</ns6:lowerCorner>
+    <ns6:upperCorner>-2.6 53.43</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mia070x1">
+    <ns6:upperCorner>0 51.2</ns6:upperCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022791977">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+    <ns2:prefLabel xml:lang="en">West Sussex</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022800417">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mia8emx1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mia070x1">
+    <ns6:lowerCorner>-1 50.7</ns6:lowerCorner>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022800417">
+    <ns6:BoundedBy rdf:nodeID="node197mia8emx1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mia8emx1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197miak0ix1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022812232">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+    <ns2:prefLabel xml:lang="en">World</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022800417">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+    <ns2:prefLabel xml:lang="en">Worcestershire</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022812232">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197miak0ix1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022812232">
+    <ns6:BoundedBy rdf:nodeID="node197miak0ix1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mj9lhjx1">
+    <ns6:srsName rdf:resource="http://www.opengis.net/gml/srs/epsg.xml#epsg:4326" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417023829585">
+    <ns6:BoundedBy rdf:nodeID="node197mj9lhjx1" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mj9lhjx1">
+    <rdf:type rdf:resource="http://www.opengis.net/gml#Envelope" />
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417023829585">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+    <ns2:prefLabel xml:lang="en">Nottinghamshire</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417022445321">
+    <ns2:scopeNote xml:lang="en">Definition</ns2:scopeNote>
+    <ns2:prefLabel xml:lang="en">Northern Ireland</ns2:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.mysite.org/thesaurus#1417023829585">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept" />
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="node197mia8emx1">
+    <ns6:lowerCorner>-2.7 52</ns6:lowerCorner>
+    <ns6:upperCorner>-1.8 52.5</ns6:upperCorner>
+  </rdf:Description>
+</rdf:RDF>
+
