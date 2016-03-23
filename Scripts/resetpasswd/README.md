@@ -92,3 +92,14 @@ Run all tests stopping on failure (`-x`) and capturing output (`-s`) so you can 
 * ~~Send a warning email x days before a users account is locked~~
 * Add prominent link to the home page from the page that confirms a users password has been changed
 * Ensure a users is logged in on the page that confirms a users password has been changed
+
+## Forcing a password reset
+
+* If for some reason you need to force a password reminder to be reset you can do so by taking a copy of needreset.sql and changing the sql as follows (where the bracketed section should be a comma-separated list of the ids you wish to change:
+
+        SELECT * FROM public.users WHERE id IN ('1','2','3');
+
+* Then run resetpasswd.py from the command line to force it to send emails to the set of ids.
+* **Remember to reinstate the original needreset.sql after you have done this!**
+
+
