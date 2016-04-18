@@ -68,31 +68,6 @@
 						</gmd:MD_LegalConstraints>
 					</gmd:resourceConstraints>						
 				</xsl:if>
-				<xsl:if test="contains(.,'Environment Agency Conditional Licence')">
-					<gmd:resourceConstraints>
-						<gmd:MD_Constraints>
-							<gmd:useLimitation>
-								<gco:CharacterString><xsl:value-of select="."></xsl:value-of></gco:CharacterString>
-							</gmd:useLimitation>
-						</gmd:MD_Constraints>
-					</gmd:resourceConstraints>
-					<gmd:resourceConstraints>
-						<gmd:MD_LegalConstraints>
-							<gmd:accessConstraints>
-								<gmd:MD_RestrictionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode" codeListValue="otherRestrictions" codeSpace="ISOTC211/19115">otherRestrictions</gmd:MD_RestrictionCode>
-							</gmd:accessConstraints>
-							<gmd:accessConstraints>
-								<gmd:MD_RestrictionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode" codeListValue="license" codeSpace="ISOTC211/19115">license</gmd:MD_RestrictionCode>
-							</gmd:accessConstraints>
-							<gmd:accessConstraints>
-								<gmd:MD_RestrictionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_RestrictionCode" codeListValue="copyright" codeSpace="ISOTC211/19115">copyright</gmd:MD_RestrictionCode>
-							</gmd:accessConstraints>
-							<gmd:otherConstraints>
-								<gco:CharacterString><xsl:value-of select="../../gmd:otherConstraints[last()]/gco:CharacterString[last()]"></xsl:value-of></gco:CharacterString>
-							</gmd:otherConstraints>
-						</gmd:MD_LegalConstraints>
-					</gmd:resourceConstraints>						
-				</xsl:if>
 			</xsl:for-each>
 		</xsl:if>
 
