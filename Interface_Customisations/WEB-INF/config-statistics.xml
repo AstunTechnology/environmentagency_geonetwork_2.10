@@ -12,7 +12,7 @@
 				<xml name="statistics" file="xml/config.xml" />
 			</output>
 		</service>
-		
+
 		<!-- - - - - Searches with no hit  - - - -->
         <service name="stat.searchesNoHit">
             <output sheet="statistics/searches-no-hit.xsl">
@@ -24,7 +24,7 @@
                 </call>
             </output>
         </service>
-        
+
 		<!-- - - - - unique IP  - - - -->
         <service name="stat.uniqueIP">
             <output sheet="statistics/unique-ip.xsl">
@@ -49,7 +49,7 @@
             </output>
         </service>
 
-		<!-- - - - - MD popularity 
+		<!-- - - - - MD popularity
         <service name="stat.mdPopularity">
             <output sheet="statistics/md-popularity.xsl">
                 <call name="mdPopularity" class="jeeves.services.db.Select">
@@ -89,7 +89,7 @@
                 </call>
             </output>
         </service>
-        
+
 		<!-- - - - - MD group popularity (sum of MD popularity group by groupid  - - - -->
         <service name="stat.groupPopularity">
             <output sheet="statistics/graph-group-popularity.xsl">
@@ -101,15 +101,15 @@
                     <param name="chartHeight" value="400"/>
                     <!--  default chart height. can be overloaded through UI -->
                     <param name="chartWidth" value="600"/>
-                    <!--  the sql query to generate graph. CAUTION when modifying this query: java code and XSL page 
-                    expect the following columns to be returned:  
+                    <!--  the sql query to generate graph. CAUTION when modifying this query: java code and XSL page
+                    expect the following columns to be returned:
                     	popularity (sum of popu per group), groupid: the group identifier, groupname: the group name -->
                     <param name="query"
                     		value="select sum(metadata.popularity) as popularity, groups.id as groupid, groups.name as groupname from metadata right join groups 	on metadata.groupowner = groups.id where groups.id > 1 group by groups.id, groups.name"/>
                 </call>
             </output>
         </service>
-        
+
 		<!-- - - - - category popularity (sum of MD popularity group by category  - - - -->
         <service name="stat.categoryPopularity">
             <output sheet="statistics/graph-category-popularity.xsl">
@@ -121,15 +121,15 @@
                     <param name="chartHeight" value="400"/>
                     <!--  default chart height. can be overloaded through UI -->
                     <param name="chartWidth" value="600"/>
-                    <!--  the sql query to generate graph. CAUTION when modifying this query: java code and XSL page 
-                    expect the following columns to be returned:  
+                    <!--  the sql query to generate graph. CAUTION when modifying this query: java code and XSL page
+                    expect the following columns to be returned:
                     	popularity (sum of popu per category), categoryid: the category identifier, categoryname: the category name -->
                     <param name="query"
                     		value="select sum(metadata.popularity) as popularity, metadatacateg.categoryid as categoryid, categories.name as categoryname from metadata, metadatacateg, categories where metadata.id = metadatacateg.metadataid and metadatacateg.categoryid = categories.id group by metadatacateg.categoryid, categories.name"/>
                 </call>
             </output>
         </service>
-        
+
 		<!-- - - - - catalog popularity (sum of MD popularity group by nodeid  - - - -->
         <service name="stat.catalogPopularity">
             <output sheet="statistics/graph-catalog-popularity.xsl">
@@ -141,22 +141,22 @@
                     <param name="chartHeight" value="400"/>
                     <!--  default chart height. can be overloaded through UI -->
                     <param name="chartWidth" value="600"/>
-                    <!--  the sql query to generate graph. CAUTION when modifying this query: java code and XSL page 
-                    expect the following columns to be returned:  
+                    <!--  the sql query to generate graph. CAUTION when modifying this query: java code and XSL page
+                    expect the following columns to be returned:
                     	popularity (sum of popu per group), groupid: the group identifier, groupname: the group name -->
                     <param name="query"
                     		value="select sum(popularity) as popu, source from metadata group by source"/>
                 </call>
             </output>
         </service>
-        
+
 		<!-- - - - - basic stats during last month  - - - -->
         <service name="stat.lastMonthSummary">
             <output sheet="statistics/last-month-summary.xsl">
                 <call name="lastMonthSummary" class=".services.statistics.LastMonthSummary"></call>
             </output>
         </service>
-        
+
 		<!-- - - - - mostSearchedCategory. also provides tagcloud functions  - - - -->
         <service name="stat.mostSearchedCategory">
             <output sheet="statistics/most-searched-categories.xsl">
@@ -183,7 +183,7 @@
                 </call>
             </output>
         </service>
-        
+
         <!--  CSV export for Requests table-->
         <service name="stat.requests.csv">
             <output sheet="statistics/to-csv.xsl" contentType="text/plain; charset=UTF-8">
@@ -195,7 +195,7 @@
                 </call>
             </output>
         </service>
-   
+
         <!--  CSV export for Params table, through Java service,
         <service name="stat.params.csv">
             <output sheet="statistics/to-csv.xsl" contentType="text/plain; charset=UTF-8">
@@ -220,7 +220,7 @@
                          false to dump only data -->
                     <param name="dumpHeader" value="true"/>
                     <!-- Allowed tables to be exported, separated by commas -->
-                    <param name="allowedTables" value="requests,params,users_groups,records_custodian,records_date_updated,records_orl,records_status,records_validation,records_deleted,opendata_validation"/>
+                    <param name="allowedTables" value="requests,params,users_groups,records_custodian,records_date_updated,records_orl,records_status,records_validation,records_deleted,opendata_validation,all_records_ea"/>
                 </call>
             </output>
         </service>
@@ -230,7 +230,7 @@
             <output sheet="statistics/tagcloud.xsl">
                 <call name="tagcloud" class="jeeves.services.db.Select">
                     <param name="db" value="main-db"/>
-                    <param name="query" 
+                    <param name="query"
                     	value="select count(termtext) as tagcount, termtext from params where termfield not in ('_op0','_op1','_op2','_op3','_op4','_op5','_op6','_isTemplate', '_locale', '_owner', '_groupOwner', '_dummy', 'type') group by termtext having count(termtext) > 0  order by tagcount desc"
                     />
                 </call>
@@ -258,13 +258,13 @@
                 <call name="deleteTmpGraphics" class=".services.statistics.DeleteTmpGraphics"/>
             </output>
         </service>
-        
+
 <!--
-select count(*) as cnt, termtext 
-from params 
+select count(*) as cnt, termtext
+from params
 where termfield not in ('_locale', '_isTemplate', 'type', '_groupOwner')
 and termfield not like '_op%'
 group by termtext order by cnt desc
--->    
+-->
     </services>
 </geonet>
