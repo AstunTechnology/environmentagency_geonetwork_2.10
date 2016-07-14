@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" 
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:fo="http://www.w3.org/1999/XSL/Format"
 	xmlns:date="http://exslt.org/dates-and-times"
 	>
-	
+
 	<xsl:include href="../main.xsl"/>
 
 	<xsl:template mode="css" match="/">
@@ -26,7 +26,7 @@
 		<script type="text/javascript" language="JavaScript" src="{/root/gui/url}/scripts/swfobject.js"/>
 		<script type="text/javascript" language="JavaScript" src="{/root/gui/url}/scripts/gn_stats.js"/>
 	</xsl:template>
-	
+
 	<!-- page content -->
 	<xsl:template name="content">
 		<xsl:call-template name="formLayout">
@@ -53,8 +53,8 @@
 				<!--  tabular statistics -->
 				<tr>
 					<td colspan="3">
-						<b><xsl:value-of select="/root/gui/strings/stat.tabularStats"/></b> 
-						<small> (<xsl:value-of select="/root/gui/strings/stat.tip1begin"/> 
+						<b><xsl:value-of select="/root/gui/strings/stat.tabularStats"/></b>
+						<small> (<xsl:value-of select="/root/gui/strings/stat.tip1begin"/>
 						<img src="{/root/gui/url}/images/arrow_down.gif"/>&#160;<xsl:value-of select="/root/gui/strings/stat.tip1end"/>)</small>
 						<hr/>
 					</td>
@@ -73,7 +73,7 @@
 				<tr><td class="spacer"/></tr>
 				<tr>
 					<td colspan="3">
-						
+
 						<a href="javascript:injectServiceResponse('stat.uniqueIP','stat.uniqueIPDiv')">
 						<b><xsl:value-of select="/root/gui/strings/stat.userIpText"/></b></a>
 						&#160;<a href="#"><img src="{/root/gui/url}/images/arrow_down.gif" onclick="collapseSearch(['stat.uniqueIPDiv'])"/></a>
@@ -149,10 +149,10 @@
 					<td colspan="3">
 						<input type="radio" id="statGraphTypeYEAR" name="statGraphType" value="YEAR" checked="true">
 							<label for="statGraphTypeYEAR"><xsl:value-of select="/root/gui/strings/stat.byYear"/></label>
-					    </input> &#160; 
+					    </input> &#160;
 						<input type="radio" id="statGraphTypeMONTH" name="statGraphType" value="MONTH">
 							<label for="statGraphTypeMONTH"><xsl:value-of select="/root/gui/strings/stat.byMonth"/></label>
-						</input> &#160; 
+						</input> &#160;
 						<input type="radio" id="statGraphTypeDAY" name="statGraphType" value="DAY">
 							<label for="statGraphTypeDAY"><xsl:value-of select="/root/gui/strings/stat.byDay"/></label>
 						</input>
@@ -164,7 +164,7 @@
 					<tr>
 						<xsl:variable name="df">[Y0001]-[M01]-[D01]</xsl:variable>
 						<!-- <xsl:variable name="df">[Y0001]-[M01]-[D01]T[H01]:[m01]:[s01]</xsl:variable> -->
-							
+
 						<td>
 							<xsl:value-of select="/root/gui/strings/stat.dateFrom"/><br/>
 							<div class="cal" id="f_date_from"></div>
@@ -260,12 +260,15 @@
 			  <br/>
 						<a href="javascript:injectServiceResponse('stat.tableExport?tableToExport=records_validation','stat.tableExportDiv')">
 					Records by Validation (published but not validated)</a>&#160;
-			 <br/>	
+			 <br/>
 						<a href="javascript:injectServiceResponse('stat.tableExport?tableToExport=records_deleted','stat.tableExportDiv')">
 					Records Deleted in past week</a>&#160;
-			<br/>	
+			<br/>
 						<a href="javascript:injectServiceResponse('stat.tableExport?tableToExport=opendata_validation','stat.tableExportDiv')">
 					data.gov.uk records validation checklist</a>&#160;
+					<br/>
+								<a href="javascript:injectServiceResponse('stat.tableExport?tableToExport=all_records_defra','stat.tableExportDiv')">
+							Download all Records (caution, takes a while!)</a>&#160;
 
 					</td>
 				</tr>
@@ -278,7 +281,7 @@
 				<tr>
 					<td colspan="3">
 						<b><xsl:value-of select="/root/gui/strings/stat.maintenance"/></b>&#160;
-						   (<xsl:value-of select="/root/gui/strings/stat.deleteTmpImages"/>) 
+						   (<xsl:value-of select="/root/gui/strings/stat.deleteTmpImages"/>)
 						<hr/>
 					</td>
 				</tr>
