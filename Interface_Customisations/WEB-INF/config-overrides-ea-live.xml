@@ -6,22 +6,28 @@
     </properties>
     <file name=".*/WEB-INF/config.xml">
         <addXML xpath="appHandler"><param name="geonetwork.dir" value="/geonetwork/data_live" /></addXML> <!-- your external data directory -->
-	<addXML xpath="appHandler"><param name="useHtml5ui" value="false" /></addXML>
-            <replaceXML xpath="resources">
-                <resource enabled="true">
-                    <name>main-db</name>
-                    <provider>jeeves.resources.dbms.ApacheDBCPool</provider>
-                    <config>
-                        <user>${db.user}</user>
-                        <password>${db.pass}</password>
-                        <driver>org.postgis.DriverWrapper</driver>
-                        <url>${db.dbname}</url>
-                        <poolSize>10</poolSize>
-                        <validationQuery>SELECT 1</validationQuery>
-			<provideDataStore>true</provideDataStore>
-                    </config>
-                </resource>
-            </replaceXML>
+	      <addXML xpath="appHandler"><param name="useHtml5ui" value="false" /></addXML>
+          <replaceXML xpath="resources">
+            <resource enabled="true">
+                <name>main-db</name>
+                <provider>jeeves.resources.dbms.ApacheDBCPool</provider>
+                <config>
+                    <user>${db.user}</user>
+                    <password>${db.pass}</password>
+                    <driver>org.postgis.DriverWrapper</driver>
+                    <url>${db.dbname}</url>
+                    <poolSize>10</poolSize>
+                    <validationQuery>SELECT 1</validationQuery>
+	                 <provideDataStore>true</provideDataStore>
+                </config>
+            </resource>
+          </replaceXML>
+          <replaceXML xpath="services/service/[@name='xml.metadata.get']"> <!-- UNTESTED skipinfo = n -->
+                        <class name=".services.metadata.Show">
+                                <param name="skipPopularity" value="y" />
+                                <param name="skipInfo" value="n" />
+                        </class>
+          </replaceXML>
     </file>
     <file name=".*/WEB-INF/config-gui.xml">
 	<replaceXML xpath="languages">
