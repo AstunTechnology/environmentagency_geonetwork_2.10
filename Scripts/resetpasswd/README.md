@@ -1,5 +1,7 @@
 # Force GeoNetwork Password Reset
 
+## Caution this script is for Geonetwork 2.10 and will NOT work with Geonetwork 3.0 or later. For Astun staff, the updated script can be found at [bitbucket](https://bitbucket.org/astuntech/metadata_updates). For everyone else, we'll publish it as soon as it's fully tested.
+
 Requirements:
 
 > Force the password to be changed every 42 days
