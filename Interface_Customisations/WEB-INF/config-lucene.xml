@@ -144,8 +144,7 @@
   <Param name="version" type="org.apache.lucene.util.Version"/>
   </defaultAnalyzer>
   -->
-  <!--<defaultAnalyzer name="org.fao.geonet.kernel.search.GeoNetworkAnalyzer"/> -->
-  <defaultAnalyzer name="org.apache.lucene.analysis.WhitespaceAnalyzer"/>
+  <defaultAnalyzer name="org.fao.geonet.kernel.search.GeoNetworkAnalyzer"/>
   <!-- TODO: Add a language specific analyzer according to:
      * metadata language
      * metadata elements language (ie. PT_FreeText elements)
@@ -185,8 +184,9 @@
     <Field name="hassource" analyzer="org.fao.geonet.kernel.search.GeoNetworkAnalyzer"/>
     <Field name="hasfeaturecat" analyzer="org.fao.geonet.kernel.search.GeoNetworkAnalyzer"/>
     
+    <!-- 
     <Field name="any" analyzer="org.fao.geonet.kernel.search.GeoNetworkAnalyzer"/>
-<!--    
+    
     <Field name="any" analyzer="org.apache.lucene.analysis.standard.StandardAnalyzer">
       <Param name="version" type="org.apache.lucene.util.Version"/>
       <Param name="stopWords" type="java.io.File" value="/path/to/resources/stopwords/en.txt"/>
@@ -204,10 +204,9 @@
   </fieldSpecificAnalyzer>
   
   <fieldSpecificSearchAnalyzer>
-   <Field name="any" analyzer="org.apache.lucene.analysis.WhitespaceAnalyzer"/> 
-   <!-- Define here analyzers to be overriden from fieldSpecificAnalyzer.
+    <!-- Define here analyzers to be overriden from fieldSpecificAnalyzer.
       By default, indexing and searching per field analyzers are the same.
-       
+      
       In some case, an analyzer could be applied at indexing and another 
       at searching time. For example when using a SynonymAnalyzer. When adding 
       Londres, Londinium, Londona for London at indexing time, then there is no
